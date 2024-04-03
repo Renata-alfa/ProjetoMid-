@@ -1,0 +1,135 @@
+////////////////////////////////////////////////////////////////Aqui vamos nozes @>>--------
+
+Criei a seguinte LISTA para simular teste, lembrando que a Tabela abaixo é meramente ilustrativa :
+---Users---
+Id  name     email                password
+----------------------------------------------
+1   Renata   Renata@example.com   password123
+2   Levy     levy@example.com     password456
+3   Hugo     Hugo@example.com     password789
+4   Lucas    Lucas@example.com    password333
+5   Luiz     Luiz@example.com     password446
+6   Bruno    Bruno@example.com    password799
+
+os arquivos deverão estar todos em mesmo diretório, caso sejam separados, é necessário atualizar endereço do import
+Para todo metodo get e set, deverá ser adaptado para receber de um form o cadastro
+Toda vez que for chamado o metodo get, deverá ser escrito na tabela equivalente o determinado campo
+As listas foram criadas para simular as tabelas(arquivos.txt, arquivos.csv, arquivo.sql, etc) preenchidas com dados
+
+/////////////////////////////////////////////////////////////////////        
+Foram criadas as classes:
+
+---UserTags---
+UserTags(int id, int tag_id, int user_id)  --> construtor
+int getId() -->retorna id
+void setId(int id) --> seta id
+int getTagId() -->retorna tag_id
+void setTagId(int tag_id) --> seta tag_id
+int getUserId() -->retorna user_id
+void setUserId(int user_id) -->seta user_id
+
+
+---UserEvents---
+UserEvents(int customer_id, int user_id, int event_id)  --> construtor
+int getCustomerId()  --> retorna o id do cliente
+void setCustomerId(int customer_id)  --> seta o id do cliente
+int getUserId()  --> retorna o id do usuário
+void setUserId(int user_id)  --> seta o id do usuário
+int getEventId()  --> retorna o id do evento
+void setEventId(int event_id)  --> seta o id do evento
+
+--Segments---
+Segments(int id, String description)  --> construtor
+int getId() -->returna id do segmento
+void setId(int id)  --> seta o id do segmento
+String getDescription()  -->retorna descrição do segmento
+void setDescription(String description)  --> seta descrição
+
+--Company_Segment ---
+Company_Segment(int id, int segment_id, int company_id)  --> contrutor
+int getId()  -->retorna o id d Company_Segment
+void setId(int id) --> seta o id Segment
+int getSegmentId() --> retorna segment_id
+void setSegmentId(int segment_id)  -->seta o id do Company_Segment
+int getCompanyId() -->retorna o id Company_Segment
+void setCompanyId(int company_id) -->seta o id company
+
+--Companies---
+Companies(int id, String code, String company_name, String fantasy_name)  --> contrutor
+int getId()  --> retorna o id de Companies
+void setId(int id)  --> seta o id
+String getCode()  -->retorna code
+void setCode(String code) --> seta code
+String getCompanyName() -->retorna nome de companie
+void setCompanyName(String company_name) -->seta nome de companies
+String getFantasyName() -->retorna nome fantasia
+void setFantasyName(String fantasy_name) --> seta o nome fantasia
+
+---UserCompanies---        
+UserCompanies(int id, int user_id, int company_id)  --> construtor
+int getId() -->retorna id
+void setId(int id) --> seta id
+int getUserId() -->retorna id usuário
+void setUserId(int user_id) -->seta id usuário
+int getCompanyId() -->retorna id de companie
+void setCompanyId(int company_id) --> retorna id company
+
+
+---Tags---
+public Tags(int id, int father_id, String description) --> contrutor
+int getId() -->retorna id
+void setId(int id) --> seta id
+int getFatherId() -->retorna father_id
+void setFatherId(int father_id) --> seta father_id
+String getDescription() -->retorna description
+void setDescription(String description) --> seta description       
+
+
+
+
+------Users-----
+public Users(int id, String name, String email, String password) --> construtor
+int getId()  --> retorna id do usuário
+String getName()  --> retorna name do usuário
+String getEmail()  --> retorna email do usuário
+String getPassword()  --> retorna senha do usuário
+int getInterestId()  --> retorna id do interesse(tag) do usuário
+
+------UserOccupations---
+UserOccupations(int id, int occupation_id, int user_id)  --> construtor
+int getId() -->retorna id
+void setId(int id) -->seta id
+int getOccupationId() -->retorna occupation_id
+void setOccupationId(int occupation_id) --> seta occupation_id
+int getUserId() -->retorna user_id
+void setUserId(int user_id) -->seta user_id
+
+---Occupations---
+public Occupations(int id, String description) -->construtor
+int getId() -->retorna id
+void setId(int id) -->seta id
+String getDescription() -->retorna description
+void setDescription(String description) --> seta description
+
+
+---Addresses---
+public Addresses(int id, String zipcode, String state, String city, String neighborhood, String street, int number, String complement)  --> construtor
+int getId() -->retorna id
+void setId(int id) -->seta id
+String getZipcode() -->retorna zipcode
+void setZipcode(String zipcode) --> seta zipcode
+String getState() -->retorna state
+void setState(String state) -->seta state
+String getCity() -->retorna city
+void setCity(String city) --> seta city
+String getNeighborhood()-->retorna neighborhood
+void setNeighborhood(String neighborhood) -->seta neighborhood
+String getStreet() -->retorna street
+void setStreet(String street) --> seta street
+int getNumber() -->retorna number
+void setNumber(int number) --> seta number
+String getComplement() -->retorna complement
+void setComplement(String complement) --> seta complement
+
+Foi criada a função:
+Interest_fc   --> retorna o nome do usuário e a descrição do seu interesse(tag)
